@@ -1,0 +1,71 @@
+<div class="basic-container">
+
+    <mat-toolbar class="toolbarHome">
+        <mat-toolbar-row>
+            <span>Regional COVID-19 Information (Last Update : {{ lastUpdate }})</span>            
+            <span class="example-spacer"></span>
+            <button class="btnDownload" aria-hidden="false" mat-raised-button color="primary">Download</button>                    
+          </mat-toolbar-row>
+    </mat-toolbar>
+
+    <br />
+
+    <mat-form-field class="filterField">
+        <mat-label class="filterLabel">Filter</mat-label>
+        <br />
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Germany" class="filterInput">
+      </mat-form-field>
+      
+      <div class="table-container">
+        <table mat-table [dataSource]="dataSource" matSort class="tblCountriesData">
+      
+          <!-- Country Column -->
+          <ng-container matColumnDef="Country">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Country </th>
+            <td mat-cell *matCellDef="let row"> {{row.Country}} </td>
+          </ng-container>
+      
+          <!-- NewConfirmed Column -->
+          <ng-container matColumnDef="NewConfirmed">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> New Confirmed </th>
+            <td mat-cell *matCellDef="let row"> {{row.NewConfirmed}} </td>
+          </ng-container>
+      
+          <!-- TotalConfirmed Column -->
+          <ng-container matColumnDef="TotalConfirmed">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Confirmed </th>
+            <td mat-cell *matCellDef="let row"> {{row.TotalConfirmed}} </td>
+          </ng-container>
+      
+          <!-- NewDeaths Column -->
+          <ng-container matColumnDef="NewDeaths">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> New Deaths </th>
+            <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.NewDeaths}} </td>
+          </ng-container>
+
+          <!-- TotalDeaths Column -->
+          <ng-container matColumnDef="TotalDeaths">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Deaths </th>
+            <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.TotalDeaths}} </td>
+          </ng-container>
+
+          <!-- NewRecovered Column -->
+          <ng-container matColumnDef="NewRecovered">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> New Recovered </th>
+            <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.NewRecovered}} </td>
+          </ng-container>
+
+          <!-- TotalRecovered Column -->
+          <ng-container matColumnDef="TotalRecovered">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Recovered </th>
+            <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.TotalRecovered}} </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+          </tr>
+        </table>
+
+      </div> 
+
+</div>

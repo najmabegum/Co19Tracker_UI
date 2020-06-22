@@ -1,0 +1,45 @@
+<div class="homePageContainer">
+  <!-- <ng-container> -->
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
+                   [fixedInViewport]="true" [fixedTopGap]="0"
+                   [fixedBottomGap]="0">        
+        <div class="divTitle" >
+          <mat-card class="title-card">
+            <img mat-card-image src="/assets/COVID-19_banner.jpg" alt="CO-19 Tracker">
+          </mat-card>
+        </div>   
+        <br />
+        <mat-list>
+          <mat-list-item> 
+            <a class="linkNavigation" routerLink="dashboard">Statistics</a></mat-list-item>
+          <mat-divider>            
+          </mat-divider>
+          <mat-list-item> 
+            <a class="linkNavigation" routerLink="dataDisplay">Regional Data</a>
+          </mat-list-item>
+          <mat-divider>            
+          </mat-divider>
+          <br />
+          <br />
+          <br />
+          <br />
+          <mat-list-item class="backgroundSource"> 
+            <label class="sourceTitle">Source Details: </label>
+          </mat-list-item>
+          <mat-divider>            
+          </mat-divider>
+          <mat-list-item class="backgroundSource"> 
+            <label class="sourceList">Source: {{ source }}</label>
+          </mat-list-item>                   
+          <mat-divider>            
+          </mat-divider>
+        </mat-list>
+      </mat-sidenav>  
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>  
+</div>
+
+

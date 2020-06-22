@@ -1,0 +1,70 @@
+<div class="globalDataContainer">
+    
+    <mat-toolbar class="toolbarHome">
+        <mat-toolbar-row>
+            <span>Important Statistics</span>                        
+          </mat-toolbar-row>
+    </mat-toolbar>
+    
+    <mat-grid-list cols="2" rowHeight="2:1" class="dashboardList">
+
+        <mat-grid-tile>
+            <mat-card class="graph-card">
+                <mat-card-header>    
+                  <mat-card-title>Global Cases</mat-card-title>    
+                </mat-card-header>
+                <div style="display: block;height: 100%;">
+                    <canvas height:200 baseChart
+                            [data]="globalChartData"
+                            [labels]="globalChartLabels"
+                            [chartType]="globalChartType"></canvas>
+                  </div>
+              </mat-card> 
+        </mat-grid-tile>
+
+     
+        <mat-grid-tile>
+            <mat-card class="graph-card">
+                <mat-card-header>    
+                  <mat-card-title>Top 10 Confirmed Cases</mat-card-title>    
+                </mat-card-header>
+                <div style="display: block;height: 100%;">
+                    <canvas height:200 baseChart
+                            [data]="top10ConfirmedData"
+                            [labels]="top10ConfirmedLabels"
+                            [chartType]="top10ConfirmedChartType"></canvas>
+                  </div>
+              </mat-card> 
+        </mat-grid-tile>
+      
+        <br />
+        
+        <mat-grid-tile>
+            <mat-card class="graph-card">
+                <mat-card-header>    
+                  <mat-card-title>Top 10 Death Cases</mat-card-title>    
+                </mat-card-header>
+                <div style="display: block;height: 100%;">
+                    <canvas height:200 baseChart
+                            [data]="top10DeathsData"
+                            [labels]="top10DeathsLabels"
+                            [chartType]="top10DeathsChartType"></canvas>
+                  </div>
+              </mat-card> 
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+            <mat-card class="graph-card">
+                <mat-card-header>    
+                  <mat-card-title>Top 10 Recovered Cases</mat-card-title>    
+                </mat-card-header>
+                <div style="display: block;height: 100%;">
+                    <canvas height:200 baseChart
+                            [data]="top10RecoveredData"
+                            [labels]="top10RecoveredLabels"
+                            [chartType]="top10RecoveredChartType"></canvas>
+                  </div>
+              </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>                 
+</div>

@@ -1,0 +1,39 @@
+
+
+ .toolbarHome
+ {
+   background-color: #545A6E;
+   color: white;
+ }
+
+.graph-card {
+    width: 100%;
+  }
+
+::ng-deep .mat-grid-tile
+  {
+      height: 45%;
+      padding-top: 6% !important; 
+  }
+
+  .tileGlobalData
+  {
+    background-color: #545A6E;
+  }
+
+.globalDataContainer
+{
+    width: 100%;    
+}
+
+::ng-deep .mat-list-item-content
+{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.globalListHeader
+{
+    font-style: italic;
+    font-size: large;     
+}

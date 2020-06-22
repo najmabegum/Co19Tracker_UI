@@ -1,0 +1,60 @@
+
+
+ .example-sidenav
+ {
+   width: 25%;
+   background-color: #545A6E;
+ }
+ 
+ .homePageContainer
+ {
+     height: 100%;
+ }
+
+  .backgroundSource
+  {
+    background-color: #D80D66;;
+  }
+ .sourceTitle
+ {
+  color: white;
+  font-weight: bold;
+  font-size: large;
+ }
+
+ .sourceList
+ {
+  color: white;
+  font-weight: 200;
+ }
+
+ .linkNavigation
+ {
+  color: white;
+  font-weight: 200;
+ }
+
+ .divTitle
+{
+    width: 100%;    
+}
+ .title-card {
+    width: 90%;
+    padding-bottom: 0;
+  }
+
+  .tileTable
+  {
+      background-color: #545A6E;
+  }
+
+  ::ng-deep .mat-sidenav-content
+  {
+    height: 100%;
+  }
+
+  ::ng-deep .mat-sidenav-container
+  {
+    height: 100%;
+  }
+
