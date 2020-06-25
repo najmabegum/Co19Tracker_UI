@@ -1,8 +1,7 @@
 import { TrackerData } from './tracker-data';
+import { ApiResponse } from './api-response';
 
 export class TrackerModel {
-    Global : TrackerData;
-    Countries : TrackerData[];
-    Date : string;
-    fromAPI : boolean;
+    data : ApiResponse;
+    source : string;
 }

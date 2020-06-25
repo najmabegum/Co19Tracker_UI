@@ -11,8 +11,8 @@ import { CovidStatisticsService } from '../../shared/covid-statistics.service';
 })
 export class DashboardComponent implements OnInit {
 
-  coviddata : TrackerModel = {  Global: { Country:'', NewConfirmed:0,NewDeaths:0,NewRecovered:0,TotalConfirmed:0,TotalDeaths:0,TotalRecovered:0 }, 
-                                Countries:[], Date:'', fromAPI:false };  
+  coviddata : TrackerModel = { data : { Global: { Country:'', NewConfirmed:0,NewDeaths:0,NewRecovered:0,TotalConfirmed:0,TotalDeaths:0,TotalRecovered:0 }, 
+                               Countries:[], Date:''}, source :'' }; 
   globalData : TrackerData = { Country:'', NewConfirmed:0,NewDeaths:0,NewRecovered:0,TotalConfirmed:0,TotalDeaths:0,TotalRecovered:0 };
   countriesList : TrackerData[] = [];
   
@@ -35,8 +35,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { 
     this.coviddata = this.route.parent.snapshot.data['regionalData'];
-    this.globalData = this.coviddata.Global;
-    this.countriesList = this.coviddata.Countries;
+    this.globalData = this.coviddata.data.Global;
+    this.countriesList = this.coviddata.data.Countries;
 
 
     this.globalChartData = [this.globalData.NewConfirmed,

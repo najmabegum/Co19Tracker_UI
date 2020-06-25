@@ -8,7 +8,7 @@ import { TrackerData } from './tracker-data';
   providedIn: 'root'
 })
 export class CovidStatisticsService {
-  privateUrl ="http://localhost:3000";
+  privateUrl ="/api";
 
   constructor(private http: HttpClient) { }
 
@@ -49,4 +49,6 @@ export class CovidStatisticsService {
     // } 
     return this.http.get<TrackerModel>(this.privateUrl);
   }  
+
+  
 }

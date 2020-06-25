@@ -4,10 +4,11 @@
         <mat-toolbar-row>
             <span>Regional COVID-19 Information (Last Update : {{ lastUpdate }})</span>            
             <span class="example-spacer"></span>
-            <button class="btnDownload" aria-hidden="false" mat-raised-button color="primary">Download</button>                    
+            <button (click)="downloadPDF()" class="btnDownload" aria-hidden="false" mat-raised-button color="primary">Download</button>                                
+            <br />            
           </mat-toolbar-row>
     </mat-toolbar>
-
+    <label class="sourceLabel"> Data currently fetched from: {{ source }}</label>
     <br />
 
     <mat-form-field class="filterField">

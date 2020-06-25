@@ -38,6 +38,13 @@
     font-size: medium;
 }
 
+.sourceLabel
+{
+    color: white;
+    margin-left: 2%;
+    font-size: medium;
+}
+
 .tblCountriesData
 {
     padding: 1em;
