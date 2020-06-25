@@ -1,16 +1,17 @@
+# Steps to start
+
 # Co19Tracker
 
-Install node.js (https://nodejs.org/en/download/)
-Open the folder in Visual Studio Code 
-Open Terminal
-Run the command "npm i" to install all dependencies
+1. Install node.js (https://nodejs.org/en/download/) <br/>
+2. Open the folder in Visual Studio Code <br/>
+3. Open Terminal<br/>
+4. Run the command "npm i" to install all dependencies<br/>
 
 ## Build
-
-In Terminal run aommand 'ng build'
+1. In Terminal run aommand 'ng build'
 
 ## Run on Browser
 
-In Terminal run command 'ng serve --proxy-config proxy.conf.json'
-Once copiling is completed, open http://localhost:4200 on browser
+1. In Terminal run command 'ng serve --proxy-config proxy.conf.json'<br/>
+2. Once copiling is completed, open http://localhost:4200 on browser
 
