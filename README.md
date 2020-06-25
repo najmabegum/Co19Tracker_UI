@@ -1,6 +1,6 @@
-# Steps to start
+# Steps to start Co19Tracker
 
-# Co19Tracker
+# Installation
 
 1. Install node.js (https://nodejs.org/en/download/) <br/>
 2. Open the folder in Visual Studio Code <br/>
