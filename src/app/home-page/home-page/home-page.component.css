@@ -3,7 +3,7 @@
  .example-sidenav
  {
    width: 25%;
-   background-color: #545A6E;
+   background-color: #545A6E;   
  }
  
  .homePageContainer
@@ -18,8 +18,8 @@
  .sourceTitle
  {
   color: white;
-  font-weight: bold;
-  font-size: large;
+  font-weight: 500;
+  font-size: medium;
  }
 
  .sourceList
@@ -28,10 +28,16 @@
   font-weight: 200;
  }
 
+ .active{
+  font-weight: bolder;
+  font-size: 1.5em;  
+  font-style: italic;  
+}
+
  .linkNavigation
  {
-  color: white;
-  font-weight: 200;
+  text-decoration: none;
+  color: white;  
  }
 
  .divTitle
@@ -39,8 +45,10 @@
     width: 100%;    
 }
  .title-card {
-    width: 90%;
+    width: 90.5%;
     padding-bottom: 0;
+    background-color: #545A6E;
+    border-radius: 0;
   }
 
   .tileTable
